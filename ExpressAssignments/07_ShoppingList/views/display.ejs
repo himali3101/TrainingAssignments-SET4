@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <style>
+        .body {
+            text-align: center;
+        }
+
+        table,
+        th,
+        td {
+            margin: 0 auto;
+            width: 40%;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body class="body">
+
+
+    <h1>Shopping List</h1>
+    <br.<br><br>
+        <form method="POST" action="/items">
+            Id:<input type="text" placeholder="Enter id of the item" name="item[id]"><br><br><br>
+            Item:<Input type="text" placeholder="Enter item name" name="item[item]"><br><br><br>
+            Price:<input type="text" placeholder="Enter price of the product" name="item[price]"><br><br><br>
+            <input type="submit" value="add" />
+            <input type="submit" value="delete" />
+        </form>
+
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+            <% data.forEach(function(item){ %>
+            <tr>
+                <td><%= item.id %></td>
+                <td> <%= item.item %> </td>
+                <td> <%= item.price %> </td>
+            </tr>
+            <% }) %>
+        </table>
+
+
+</body>
+
+</html>

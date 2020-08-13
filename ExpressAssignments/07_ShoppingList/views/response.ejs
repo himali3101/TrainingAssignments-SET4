@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <style>
+        .body {
+            text-align: center;
+        }
+
+        table,
+        th,
+        td {
+            margin: 0 auto;
+            width: 40%;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body class="body">
+
+
+    <h1>Shopping List</h1>
+    <br.<br><br>
+
+
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td><%= data.id %></td>
+                <td> <%= data.item %> </td>
+                <td> <%= data.price %> </td>
+            </tr>
+
+        </table>
+
+
+</body>
+
+</html>
